@@ -4,12 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
+    "build": "ng build --target production --build-optimizer --vendor-chunk --prod --named-chunks false --sourcemaps false --output-hashing all",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "preinstall": "npm install -g angular-cli",
-    "postinstall": "ng build && mv dist/* ."
+    "postinstall": "ng build --target production --build-optimizer --vendor-chunk --prod --named-chunks false --sourcemaps false --output-hashing all"
   },
   "private": true,
   "dependencies": {
