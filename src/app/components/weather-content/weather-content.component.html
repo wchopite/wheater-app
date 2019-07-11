@@ -1,0 +1,25 @@
+<div class="container content">
+	<hr class="mt-3">
+	<div class="row mb-3">
+		<div class="col-md-12">
+			<form [formGroup]="fg">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+						<input type="text" class="form-control mr-3 w-75" [style.display]="'inline-block'" id="nombre" placeholder="El tiempo en..." [formControl]="fg.controls['nombre']">            
+						<i class="material-icons">search</i>
+						<div *ngIf="fg.controls['nombre'].hasError('invalidNombre')">Nombre Inv&aacute;lido</div>
+						<div *ngIf="fg.controls['nombre'].hasError('minLongNumber')">Nombre debe tener al menos {{minLongitud}} de largo.</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row row-flex mb-5">
+		<app-weather-card
+			[locationSelected]=locationSelected
+			[hasLocation]=hasLocation>
+		</app-weather-card>
+	</div>
+</div>

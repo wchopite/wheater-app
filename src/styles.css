@@ -1,0 +1,83 @@
+
+@import '~bootstrap/dist/css/bootstrap.css';
+
+@import	 url('https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:400,400i,700,700i');
+
+section{
+	padding: 100px 0;
+}
+.container.content{
+	min-height: 100vh;
+}
+.navLinks{
+	margin-top:10px;
+	background: #f7f7f7;
+	padding:10px 0;
+}
+.navLinks a{
+	margin-left: 15px;
+	color:black;	
+	cursor: pointer;
+}
+.navLinks a:hover{
+	color:green !important;
+	text-decoration: underline !important;
+}
+.card{
+	margin: 10px 15px;
+}
+.card-content{
+	background:	#fff;
+	border:	4px;
+	box-shadow:	0	2px	5px	0	rgba(0,0,0,.16),	0	2px	10px	0	rgba(0,0,0,.12);
+	min-height: 38rem
+}
+.card-img{
+	position:	relative;
+	overflow:	hidden;
+	border-radius:	0;
+	z-index:	1;
+}
+.card-img img{
+	height:	auto;
+	display:	block;
+}
+.card-desc{
+	padding: 1.25rem;
+	min-height: 20rem;
+}
+.card-desc h3{
+	color:	#000000;
+	font-weight:	600;
+	font-size:	1.5em;
+	line-height:	1.3em;
+	margin-top:	0;
+	margin-bottom:	5px;
+	padding:	0;
+}
+.card-desc p{
+	color:	#747373;
+	font-size:	14px;
+	font-weight:	400;
+	font-size:	1em;
+	line-height:	1.5;
+	margin:	0px;
+	margin-bottom:	20px;
+	padding:	0;
+	font-family:	'Raleway',	sans-serif;
+}
+.inline-block{
+  	display: inline-block !important;
+}
+.footer{
+	text-align: center;
+	background: #19BC9C;
+	padding:10px 0;
+	color:white;
+}
+.header{
+	text-align: center;
+	background: #19BC9C;
+	padding:20px 0;
+	color:white;
+}

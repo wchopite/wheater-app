@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-content" *ngIf="hasLocation">        
+        <h2>{{ locationSelected.location.name }}</h2>    
+        <small>{{ locationSelected.location.country }}</small>    
+        <span>{{ locationSelected.current.last_updated }}</span>            
+        <p>{{ locationSelected.current.condition.text }}</p>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card-img">            
+                    <img src="{{ locationSelected.current.condition.icon }}" alt="">
+                    <h5 *ngIf="scaleSelected=='C'">{{ locationSelected.current.temp_c }}</h5>
+                    <h5 *ngIf="scaleSelected=='F'">{{ locationSelected.current.temp_f }}</h5>
+                    <small (click)="changeScale('C')">C</small>|<small (click)="changeScale('F')">F</small>
+                </div>
+                <small *ngIf="scaleSelected=='C'">{{ locationSelected.current.feelslike_c }}</small>
+                <small *ngIf="scaleSelected=='F'">{{ locationSelected.current.feelslike_f }}</small>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    <span>Probabilidad de precipitaciones:</span><span>{{ locationSelected.current.precip_in }}</span>
+                </p>
+                <p>
+                    <span>Humedad:</span><span>{{ locationSelected.current.humidity }}</span>
+                </p>
+                <p>
+                    <span>Viento:</span><span>{{ locationSelected.current.wind_kph }}</span><span>km/h</span>
+                </p>
+            </div>
+        </div>        
+        <div class="card-desc">              
+                <app-forecast-card
+                *ngFor="let w of locationSelected.forecast.forecastday" 
+                [forecastday]="w">
+                </app-forecast-card>
+        </div>
+    </div>
+</div>

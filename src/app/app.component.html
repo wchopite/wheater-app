@@ -1,0 +1,24 @@
+<div class="header">
+<h1 [style.margin-top.px]="15">My weather</h1>
+</div>
+<div class="container content">
+  <div class="page-header">
+    <div class="container">
+      <div class="navLinks">
+        <a (click)="getQuickWeather('Mendoza')">Mendoza - Argentina</a> /
+        <a (click)="getQuickWeather('Buenos Aires')">Buenos Aires - Argentina</a> /
+        <a (click)="getQuickWeather('Bogota')">Bog&oacute;ta - Colombia</a> /
+        <a (click)="getQuickWeather('Lima')">Lima - Per&uacute;</a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h1>
+     {{ title }}
+    </h1>
+  </div>
+  <app-weather-content></app-weather-content>
+</div>
+<div class="footer">
+    Fecha: {{ time | async }}
+</div>
